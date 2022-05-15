@@ -1,4 +1,6 @@
 import './NavBar.css'
+import CartWidget from '../CartWidget/CartWidget'
+
 const NavBar =() => {
   return (
     <nav>
@@ -24,6 +26,7 @@ const NavBar =() => {
               <a class="nav-link active" aria-current="page" href="#">Logearse</a>
               </li>
             </ul>
+            <CartWidget />
           </div>
         </div>
       </nav>

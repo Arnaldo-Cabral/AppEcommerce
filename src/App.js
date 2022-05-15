@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <CartWidget />
       <ItemListContainer greeting='Ecommerce con React y Boostrap' />    
     </div>
   );
