@@ -35,3 +35,19 @@ h1{
     padding: 10px;
     background-color:white;
     }
+
+.contador{
+    display: flex;
+    margin-left:10%  
+}
+
+.botonCarrito{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.botonCarrito{
+    margin: 8px;
+    font-weight: 20px;
+}
