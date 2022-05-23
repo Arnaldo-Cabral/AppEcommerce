@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer greeting='Hola Coders' />
-      <ItemCount />
+      
     </div>
   );
 }
