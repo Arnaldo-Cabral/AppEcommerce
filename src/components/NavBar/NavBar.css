@@ -45,9 +45,33 @@ h1{
     width: 20px;
     height: 20px;
     background-color: white;
-}
-
-.botonCarrito{
     margin: 8px;
     font-weight: 20px;
 }
+
+.card {
+   display: inline-block;
+   width: 10%;
+   margin: 20px;
+   padding: auto;
+}
+
+.imgCarrito{
+   width: 5rem;
+
+}
+
+.idNumero{
+    font-size:20px;
+    text-align:left
+}
+
+.nombreProducto{
+    font-size:30px;
+    text-align:center
+}
+
+.precio{
+    font-size:20px;
+}
+
