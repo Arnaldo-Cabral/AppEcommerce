@@ -24,3 +24,24 @@ h1{
     display: inline-flex;
    font-size: 30px;
 }
+
+.card{
+    width: 18rem;
+    display: inline-flex;
+    margin: 10px;
+    padding: 1px
+}
+
+.imgCarrito{
+    height:250px;
+}
+
+.nombreProducto{
+    margin-top:3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.precio{
+    font-weight: bold;
+    font-size:20px
+}
