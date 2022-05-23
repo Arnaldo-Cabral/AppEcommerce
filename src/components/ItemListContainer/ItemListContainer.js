@@ -5,6 +5,7 @@ import ItemCount from '../ItemCount/ItemCount'
 
 
 
+
 function ItemListContainer(props) {
     const [products, setProducts] = useState([])
 
@@ -20,8 +21,8 @@ function ItemListContainer(props) {
     return(
         <div>
             <h2>{props.greeting}</h2>
-            <ItemList products={products}/>  
-            <ItemCount />    
+            <ItemList products={products}/>
+            <ItemCount />           
         </div>
     )
 }

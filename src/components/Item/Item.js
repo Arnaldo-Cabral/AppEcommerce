@@ -1,3 +1,4 @@
+import React from 'react';
 import NavBar from "../NavBar/NavBar"
 
 const Item = ({id, name, price,img}) => {
