@@ -1,5 +1,6 @@
 import React from "react"
 import '../NavBar/NavBar.css'
+import { ItemCount } from "../ItemCount/ItemCount"
 
 const Item = ({id, name, price,img}) => {
     return (
@@ -9,8 +10,9 @@ const Item = ({id, name, price,img}) => {
             <div className="container">
                 <h4 className="nombreProducto"><b>{name}</b></h4>
                 <p className="precio">${price}</p>
+                <ItemCount />
+             </div>
         </div>
-    </div>
     )
 }
 

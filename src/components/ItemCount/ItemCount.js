@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import NavBar from "../NavBar/NavBar.css"
 
-const ItemCount = () => {
+export const ItemCount = () => {
     const [count, setCount] = useState(0)
 
     const decrement = () => {
@@ -22,4 +22,4 @@ const ItemCount = () => {
     )
 }
 
-export default ItemCount
+
