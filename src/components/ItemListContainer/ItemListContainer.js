@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getProducts } from './../asyncmock'
 import ItemList from '../ItemList/ItemList'
-import ItemCount from '../ItemCount/ItemCount'
+
 
 
 
@@ -22,7 +22,6 @@ function ItemListContainer(props) {
         <div>
             <h2>{props.greeting}</h2>
             <ItemList products={products}/>
-            <ItemCount />           
         </div>
     )
 }
