@@ -55,6 +55,13 @@ h1{
     margin: 20px;
     padding: auto;
 }
+
+.cardDetalle {
+    display: inline-block;
+    width: 20%;
+    margin: 20px;
+    padding: auto;
+}
  
 .imgCarrito{
     width: 5rem;
@@ -74,3 +81,4 @@ h1{
 .precio{
      font-size:20px;
 }
+

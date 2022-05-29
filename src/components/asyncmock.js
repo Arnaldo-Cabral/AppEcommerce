@@ -23,7 +23,7 @@ const products = [
         price: 250000, 
         img:'./images/asus_tuf_gamer.jpg', 
         category: 'notebook',
-        description:'especial para darle los findes al LOL o Fornite',
+        description:'Especial para LOL o Fornite',
         stock: 10
     },
     { 
@@ -60,6 +60,14 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
+        }, 2000)
+    })
+}
+
+export const getProductsById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === id))
         }, 2000)
     })
 }
