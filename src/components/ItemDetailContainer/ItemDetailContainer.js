@@ -1,21 +1,25 @@
 import '../NavBar/NavBar.css'
 import { useState, useEffect } from "react";
 import { getProductsById } from "../asyncmock"
-import Item from "../Item/Item";
 import ItemDetail from "../ItemDetail/ItemDetail"
+import { useParams } from 'react-router-dom';
 
-const ItemDetailContainer = ({productos}) => {
+
+const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
 
+    const {productId} = useParams()
+    
+
     useEffect(() =>{
-        getProductsById('3').then(response =>{
+        getProductsById(productId).then(response =>{
            setProduct(response)
         })
     }, [])
 
     return (
         <div>
-            <h1>Detalle productos</h1>
+            <h1>Detalle producto</h1>
             <ItemDetail {...product} />            
         </div>
     )
