@@ -34,7 +34,20 @@ const products = [
         name: 'Tablet Lenovo Yoga', 
         price: 50000, 
         img:'https://i0.wp.com/clipset.com/wp-content/uploads/2019/09/Lenovo-Yoga-C940_14inch_Mica_front_facing.jpg?fit=2234%2C1500&ssl=1', 
+    },
+    { 
+        id: '7', 
+        name: 'Play Station 5',  
+        price: 205000, 
+        img:'https://www.robotina.us/__export/1615144605805/sites/debate/img/2021/03/07/ps5-digital-edition-sony.jpg_349127161.jpg', 
+    },
+    { 
+        id: '8', 
+        name: 'Xbox Serie X', 
+        price: 185000, 
+        img:'https://as01.epimg.net/meristation/imagenes/2020/11/09/noticias/1604924589_050302_1604924886_sumario_normal.jpg', 
     }
+
 ]
 
 export const getProducts = () => {
