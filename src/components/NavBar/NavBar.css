@@ -1,19 +1,34 @@
 *{
     margin: 0;
     padding: 0;
-    background-color:#eacece;
+    box-sizing: border-box;
+    /* background-image: linear-gradient(#eacece, #d7ceea, #ceeada); */
 }
 
 h1{
     margin: 10px;
     padding: 5px;
-    font-size:30px;
+    font-size:50px;
+    color: rgb(21, 20, 104);
+    text-decoration: none;    
+}
+
+h2{
+    font-size: 40px;
+    color: rgb(21, 20, 104);
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size:25px
+    
 }
 
 .navBar{
     display: inline-flex;
     background-color: white;
-    margin-left: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .boton{
@@ -25,6 +40,7 @@ h1{
     font-family: lora, sans-serif;
     color: black;
     background-color: white;
+    text-decoration: none;
 }
 
 .Activeboton{
@@ -36,22 +52,23 @@ h1{
     font-family: lora, sans-serif;
     font-weight: bold;
     font-size:20px;
-    color: #eacece;;
+    color: rgb(21, 20, 104);
     background-color: white;
+    text-decoration: none;
+    margin-bottom: 1.5%;
 }
 
 
-
 .carrito{
-    width: 10%;
-    margin-left: -80%;
+    width: 15%;
     padding: 10px;
     background-color:white;
-    }
+}
 
 .contador{
     display: flex;
     margin-left:10%  
+   
 }
 
 .botonCarrito{
@@ -64,21 +81,14 @@ h1{
 
 .card {
     display: inline-block;
-    width: 10%;
-    margin: 20px;
-    padding: auto;
-}
-
-.cardDetalle {
-    display: inline-block;
-    width: 20%;
-    margin: 20px;
-    padding: auto;
+    max-width: 300px;
+    margin: 5px;
 }
  
 .imgCarrito{
-    width: 5rem;
- 
+    height: 250px;
+    width: 300px;
+    vertical-align: middle;
 }
  
 .idNumero{
@@ -93,5 +103,43 @@ h1{
  
 .precio{
      font-size:20px;
+}
+
+.cardDetalle {
+    display: inline-flex;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+}
+
+.containerDetail,
+.nombreProductoDetail,
+.descriptionDetail,
+.precioDetail,
+.stockDetail{
+    background-color: #ffff;
+    width: 100%;
+}
+
+.nombreProductoDetail{
+    font-size:50px;
+    font-weight: bold;
+    text-align:center;
+    font-family: cursive;
+}
+
+.descriptionDetail{
+    width: 80%;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 30px;  
+}
+
+.precioDetail,
+.stockDetail{    
+    display: inline;
+    margin-left:10px;
+    padding:2px;
+    font-size: 20px;
 }
 

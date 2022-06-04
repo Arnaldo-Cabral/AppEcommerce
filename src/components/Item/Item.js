@@ -12,11 +12,13 @@ const Item = ({id, name, price, img}) => {
                 <h4 className="nombreProducto"><b>{name}</b></h4>
                 <p className="precio">${price}</p>
                 <Link to={`/detail/${id}`}>Ver detalle</Link>
-                <ItemCount />
+                {/* <ItemCount /> */}
              </div>
         </div>
     )
 }
+
+
 
 export default Item
 

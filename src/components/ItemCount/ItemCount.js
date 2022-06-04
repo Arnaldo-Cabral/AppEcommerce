@@ -16,7 +16,7 @@ export const ItemCount = () => {
     return(
         <div className='contador' >
             <button className="botonCarrito" onClick={decrement}>-</button>
-            <h2 className='numContador'>{count}</h2>
+            <h3 className='numContador'>{count}</h3>
             <button className="botonCarrito" onClick={increment}>+</button>
         </div>
     )

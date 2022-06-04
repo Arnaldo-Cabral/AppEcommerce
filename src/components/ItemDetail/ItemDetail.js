@@ -1,15 +1,19 @@
 import '../NavBar/NavBar.css'
+import { ItemCount } from "../ItemCount/ItemCount"
+
 
 const ItemDetail =({name, img, price, description, stock}) => {
     return(
         <div className="cardDetalle">
             <img className="imgCarrito" src={img} />
-            <div className="container">
-                <h4 className="nombreProducto">{name}</h4>
-                <p className="nombreProducto">{description}</p>
-                <h4 className="precio"><b>${price}</b></h4>
-                <h4 className="precio"><b>Stock{stock}</b></h4>
+            <div className="containerDetail">
+                <h4 className="nombreProductoDetail">{name}</h4>
+                <p className="descriptionDetail">{description}</p>
+                <h4 className="precioDetail">${price}</h4>
+                <h4 className="stockDetail">Stock{stock}</h4>
+                <ItemCount />
             </div>
+            
         </div>    
     )
 }
