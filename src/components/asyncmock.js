@@ -3,50 +3,74 @@ const products = [
         id: '1', 
         name: 'Samsung S22', 
         price: 150000, 
-        img:'https://i.blogs.es/e2df15/samsung-galaxy-s22-5g-letsgodigital-00/1366_2000.jpeg', 
+        img:'https://i.blogs.es/e2df15/samsung-galaxy-s22-5g-letsgodigital-00/1366_2000.jpeg',
+        category: 'celular',
+        description:' Celular de alta Gama mejor que el Iphone según Samsung',
+        stock: 50 
     },
     { 
         id: '2', 
         name: 'Iphone 12', 
         price: 200000, 
-        img:'https://www.teknogaste.com/wp-content/uploads/2020/09/1-25.jpg', 
+        img:'https://www.teknogaste.com/wp-content/uploads/2020/09/1-25.jpg',
+        category: 'celular',
+        description:'Caro pero el mejor, no lo dudes',
+        stock: 20 
     },
     { 
         id: '3', 
         name: 'Asus gamer', 
         price: 250000, 
-        img:'https://geekculture.co/wp-content/uploads/2019/08/ROG-laptops-2019-1.jpg', 
+        img:'https://geekculture.co/wp-content/uploads/2019/08/ROG-laptops-2019-1.jpg',
+        category: 'notebook',
+        description:'Especial para LOL o Fornite',
+        stock: 10
     },
     { 
         id: '4', 
         name: 'MacPro M1', 
         price: 300000, 
-        img:'https://www.alltechng.com/wp-content/uploads/2020/11/maxresdefault-234.jpg', 
+        img:'https://www.alltechng.com/wp-content/uploads/2020/11/maxresdefault-234.jpg',
+        category: 'notebook',
+        description:'dale especial para programar',
+        stock: 5
     },
     { 
         id: '5', 
         name: 'Apple iPad', 
         price: 150000, 
-        img:'https://cdn.macstories.net/img_2276-1621295326905.jpeg', 
+        img:'https://cdn.macstories.net/img_2276-1621295326905.jpeg',
+        category: 'tablet',
+        description:'La mejor',
+        stock: 50
     },
     { 
         id: '6', 
         name: 'Tablet Lenovo Yoga', 
         price: 50000, 
-        img:'https://i0.wp.com/clipset.com/wp-content/uploads/2019/09/Lenovo-Yoga-C940_14inch_Mica_front_facing.jpg?fit=2234%2C1500&ssl=1', 
+        img:'https://i0.wp.com/clipset.com/wp-content/uploads/2019/09/Lenovo-Yoga-C940_14inch_Mica_front_facing.jpg?fit=2234%2C1500&ssl=1',
+        category: 'tablet',
+        description:'Lo mejor de Lenovo, combina teclado y touch',
+        stock: 15
     },
-    { 
+   /*  { 
         id: '7', 
         name: 'Play Station 5',  
         price: 205000, 
-        img:'https://www.robotina.us/__export/1615144605805/sites/debate/img/2021/03/07/ps5-digital-edition-sony.jpg_349127161.jpg', 
+        img:'https://www.robotina.us/__export/1615144605805/sites/debate/img/2021/03/07/ps5-digital-edition-sony.jpg_349127161.jpg',
+        category: 'consola',
+        description:'PS 5 incluye PlayStation Plus 12 meses',
+        stock: 15
     },
     { 
         id: '8', 
         name: 'Xbox Serie X', 
         price: 185000, 
-        img:'https://as01.epimg.net/meristation/imagenes/2020/11/09/noticias/1604924589_050302_1604924886_sumario_normal.jpg', 
-    }
+        img:'https://as01.epimg.net/meristation/imagenes/2020/11/09/noticias/1604924589_050302_1604924886_sumario_normal.jpg',
+        category: 'consola',
+        description:'Serie X Special Edition 3 juegos a elección',
+        stock: 15
+    } */
 
 ]
 
