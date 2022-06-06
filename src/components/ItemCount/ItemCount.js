@@ -1,23 +1,28 @@
 import { useState } from 'react'
 import NavBar from "../NavBar/NavBar.css"
 
-export const ItemCount = () => {
+export const ItemCount = ({onConfirm, stock}) => {
     const [count, setCount] = useState(0)
 
     const decrement = () => {
+        if(count > 0)
         setCount((count) => count - 1)
 
     }
 
     const increment = () => {
-        setCount(count + 1)
+       if(count < stock)
+        setCount(count + 1)    
     }
+
+    
 
     return(
         <div className='contador' >
             <button className="botonCarrito" onClick={decrement}>-</button>
             <h3 className='numContador'>{count}</h3>
             <button className="botonCarrito" onClick={increment}>+</button>
+            <button onClick = {() => onConfirm(count)}className="boton2">Agregar producto</button>
         </div>
     )
 }

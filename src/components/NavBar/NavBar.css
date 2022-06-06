@@ -43,6 +43,19 @@ h3{
     text-decoration: none;
 }
 
+.boton2{
+    background-color: #151468;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 .Activeboton{
     display: inline-flex;
     margin: 10px;

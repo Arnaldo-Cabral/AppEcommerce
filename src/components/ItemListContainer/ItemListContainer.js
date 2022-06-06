@@ -9,7 +9,15 @@ const ItemListContainer = (props) => {
  const [products, setProducts] = useState([])
 
  const {categoryId} = useParams()
- 
+
+ const onResize = () => console.log('cambio de tamaño')
+  useEffect(() =>{
+    window.addEventListener('resize', onResize)
+
+    return () =>{
+     window.removeEventListener('resize', onResize)
+   }
+ }, [])
 
   useEffect(() => {
     if(!categoryId){
