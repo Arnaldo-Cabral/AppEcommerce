@@ -1,16 +1,20 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import '../NavBar/NavBar.css'
 import { ItemCount } from "../ItemCount/ItemCount"
+import CartContext from '../../context/CartContext'
 
 
-const ItemDetail =({name, img, price, description, stock}) => {
+const ItemDetail =({id, name, img, price, description, stock}) => {
     const [quantity, setQuantity] = useState(0)
 
-    const handleOnAdd = (count) => {
+    const { addItem } = useContext(CartContext)
+        
+    const handleOnAdd = (quantity) => {
         console.log('agregue al carrito')
-        console.log(count)
-        setQuantity(count)
+        console.log(quantity)
+        setQuantity(quantity)
+        addItem({ id, name, price, quantity})
     }   
 
     return(

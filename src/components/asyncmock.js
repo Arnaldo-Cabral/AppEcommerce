@@ -6,7 +6,7 @@ const products = [
         img:'/images/samsung-s22.jpeg', 
         category: 'celular',
         description:' Celular de alta Gama mejor que el Iphone según Samsung',
-        stock: 5
+        stock: 15
     },
     { 
         id: '2', 
@@ -15,7 +15,7 @@ const products = [
         img:'/images/iphone12.jpg', 
         category: 'celular',
         description:'Caro pero el mejor, no lo dudes',
-        stock: 2
+        stock: 12
     },
     { 
         id: '3', 
@@ -24,7 +24,7 @@ const products = [
         img:'https://geekculture.co/wp-content/uploads/2019/08/ROG-laptops-2019-1.jpg', 
         category: 'notebook',
         description:'Especial para LOL o Fornite',
-        stock: 3
+        stock: 13
     },
     { 
         id: '4', 
@@ -33,7 +33,7 @@ const products = [
         img:'/images/MACBOOK-PRO-14-M1.jpg', 
         category: 'notebook',
         description:'dale especial para programar',
-        stock: 5
+        stock: 7
     },
     { 
         id: '5', 
