@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import NavBar from "../NavBar/NavBar.css"
 
-export const ItemCount = ({onConfirm, stock}) => {
-    const [count, setCount] = useState(0)
+export const ItemCount = ({onConfirm, stock, initial = 1 }) => {
+    const [count, setCount] = useState(initial)
+
+    console.log(initial)
+    
 
     const decrement = () => {
-        if(count > 0)
+        if(count > 1)
         setCount((count) => count - 1)
 
     }

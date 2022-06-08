@@ -1,6 +1,7 @@
 import '../NavBar/NavBar.css'
 import { useContext} from 'react'
 import CartContext  from '../../context/CartContext' 
+import { Link } from 'react-router-dom'
 
 const CartWidget = () => {
 
@@ -8,11 +9,13 @@ const CartWidget = () => {
 
     const quantity = getQuantity()
 
-    return (
-      <div>
-        <img className='carrito' src='./images/Cart.jpg' alt='cart-widget' />
-        { quantity }
-      </div>
+    return(
+        <Link to='/cart'>
+          <div className='logoCarrito'>
+            <img className='carrito' src='./images/Cart.jpg' alt='cart-widget' />
+            { quantity }
+           </div>
+        </Link>
     );
 }
 

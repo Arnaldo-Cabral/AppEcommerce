@@ -157,5 +157,9 @@ h3{
 }
 
 .listaCompra{
-    display: inline-flex;
+    display: flex;
+}
+
+.logoCarrito{
+    display: inline;
 }
