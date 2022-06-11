@@ -13,16 +13,16 @@ const Cart = () => {
             {cart.map(prod => {
                 return(
                     <div key={prod.id} className='listaCompra'>
-                        <div >{prod.name}</div>
-                        <div> Cantidad: {prod.quantity}</div>
-                        <div> Precio: $ {prod.price}</div>
-                        <div> Subtotal: $ {prod.price*prod.quantity}</div>
-                        <button onClick={() => removeItem(prod.id)}>Remover</button>
+                        <div className='listaItems' >{prod.name}</div>
+                        <div className='listaItems'> Cantidad: {prod.quantity}</div>
+                        <div className='listaItems'> Precio: $ {prod.price}</div>
+                        <div className='listaItems'> Subtotal: $ {prod.price*prod.quantity}</div>
+                        <button className="botonRemove"onClick={() => removeItem(prod.id)}>Remover</button>
                     </div>
                 )})
             }
             <div><button onClick = {() => removeAll()}className="boton2">Vaciar Carrito</button></div>
-            <div> Total: ${totalPrice ()}</div>
+            <div className="totalCompra"> Total: ${totalPrice ()}</div>
         </div>
     </div>
     )

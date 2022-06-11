@@ -7,6 +7,8 @@ import { getProductsByCategory } from "../asyncmock"
 
 const ItemListContainer = (props) => {
  const [products, setProducts] = useState([])
+ const [loading, setLoading] = useState(true)
+ 
 
  const {categoryId} = useParams()
 
@@ -19,7 +21,7 @@ const ItemListContainer = (props) => {
    }
  }, []) */
 
-  useEffect(() => {
+  /* useEffect(() => {
     if(!categoryId){
       getProducts().then(response => {
         setProducts(response)
@@ -30,9 +32,32 @@ const ItemListContainer = (props) => {
       })
     }
       
-  }, [categoryId])
-   
-    
+  }, [categoryId]) */
+  useEffect(() => {
+    setLoading(true)
+
+    if(!categoryId) {
+        getProducts().then(response => {
+            setProducts(response)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+    } else {
+        getProductsByCategory(categoryId).then(response => {
+            setProducts(response)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+    }
+}, [categoryId])
+
+  if(loading) {
+    return <div class="spinner"></div>
+  }
 
   return (<div>
     <h2>{props.greeting}</h2> 

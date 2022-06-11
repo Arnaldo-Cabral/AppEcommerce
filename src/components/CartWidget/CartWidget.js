@@ -12,9 +12,9 @@ const CartWidget = () => {
     return(
         <Link to='/cart'>
           <div className='logoCarrito'>
-            <img className='carrito' src='./images/Cart.jpg' alt='cart-widget' />
-            { quantity }
-           </div>
+            <img className='carrito' src='../images/Cart.jpg' alt='cart-widget' />
+            <div className='quantCarrito'>{ quantity }</div>
+          </div>
         </Link>
     );
 }
