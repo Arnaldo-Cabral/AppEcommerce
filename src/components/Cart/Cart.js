@@ -31,7 +31,7 @@ const Cart = () => {
                 <div><button onClick = {() => removeAll()}className="boton2">Vaciar Carrito</button></div>
                 <div><button onClick = {() => createOrder()}className="boton2">Crear Orden</button></div>
             </div>            
-            <div className="totalCompra"> Total: ${totalPrice ()}</div>
+            <div className="totalCompra"> Total: ${totalPrice()}</div>
         </div>
     </div>
     )
