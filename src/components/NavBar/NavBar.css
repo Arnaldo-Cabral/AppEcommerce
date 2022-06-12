@@ -56,6 +56,12 @@ h3{
     margin: 4px 2px;
     cursor: pointer;
     margin-top: 5%;
+    margin-left: 20px;
+}
+
+.bottonFotter{
+    display: inline-flex;
+    margin: 1%;
 }
 
 .Activeboton{
@@ -147,7 +153,16 @@ h3{
     height: 56px;
     border-radius: 50%;
     border-left-color: rgb(21, 20, 104);
-    animation: spin 1s ease infinite;
+    animation: spin 500ms ease infinite;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
 .containerDetail,

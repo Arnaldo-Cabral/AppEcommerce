@@ -4,7 +4,7 @@ import NavBar from '../NavBar/NavBar'
 
 const Cart = () => {
 
-    const { cart, removeItem, removeAll, totalPrice} = useContext(CartContext)
+    const { cart, removeItem, removeAll, totalPrice, createOrder} = useContext(CartContext)
 
     return(
     <div>
@@ -21,7 +21,10 @@ const Cart = () => {
                     </div>
                 )})
             }
-            <div><button onClick = {() => removeAll()}className="boton2">Vaciar Carrito</button></div>
+            <div className="bottonFotter">
+                <div><button onClick = {() => removeAll()}className="boton2">Vaciar Carrito</button></div>
+                <div><button onClick = {() => createOrder()}className="boton2">Crear Orden</button></div>
+            </div>            
             <div className="totalCompra"> Total: ${totalPrice ()}</div>
         </div>
     </div>
