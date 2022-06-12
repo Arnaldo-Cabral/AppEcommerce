@@ -9,7 +9,6 @@ const Cart = () => {
     if(getQuantity() === 0) {
         return (
             <h2 className="sinItem">No agregó productos al carrito</h2>
-            
         )
     }
 
