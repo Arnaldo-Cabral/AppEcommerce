@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
     }, [productId])
 
     return (
-        <div>
+        <div className='altura'>
             <h2>Detalle producto</h2>
             <ItemDetail {...product}  />            
         </div>

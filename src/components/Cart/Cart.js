@@ -2,12 +2,19 @@ import { useContext } from 'react'
 import CartContext from '../../context/CartContext'
 import NavBar from '../NavBar/NavBar'
 
+
 const Cart = () => {
 
-    const { cart, removeItem, removeAll, totalPrice, createOrder} = useContext(CartContext)
+    const { cart, getQuantity, removeItem, removeAll, totalPrice, createOrder} = useContext(CartContext)
+    if(getQuantity() === 0) {
+        return (
+            <h2 className="sinItem">No agregó productos al carrito</h2>
+            
+        )
+    }
 
     return(
-    <div>
+    <div className="altura">
         <h1>Cart</h1>
         <div>
             {cart.map(prod => {

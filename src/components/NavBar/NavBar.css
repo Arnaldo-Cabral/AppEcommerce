@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-image: linear-gradient(#eacece, #d7ceea, #ceeada); */
 }
 
 h1{
@@ -22,6 +21,13 @@ h2{
 h3{
     font-size:25px
     
+}
+
+.sinItem{
+    font-size: 30px;
+    color: rgb(21, 20, 104);
+    padding-top: 10%;
+    padding-bottom:21%;
 }
 
 .navBar{
@@ -223,4 +229,8 @@ h3{
 
 .totalCompra{
     font-size:25px
+}
+
+.altura{
+    min-height: 100vh;
 }
