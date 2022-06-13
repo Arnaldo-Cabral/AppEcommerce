@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import CartContext from '../../context/CartContext'
 import NavBar from '../NavBar/NavBar'
+import { Link, NavLink } from 'react-router-dom'
 
 
 const Cart = () => {
@@ -8,7 +9,8 @@ const Cart = () => {
     const { cart, getQuantity, removeItem, removeAll, totalPrice, createOrder} = useContext(CartContext)
     if(getQuantity() === 0) {
         return (
-            <h2 className="sinItem">No agregó productos al carrito</h2>
+            <><h2 className="sinItem">No agregó productos al carrito</h2>
+            <Link to="/"><button className="boton2">Ir a productos de la tienda</button></Link></>
         )
     }
 

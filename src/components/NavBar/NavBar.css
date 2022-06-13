@@ -27,7 +27,7 @@ h3{
     font-size: 30px;
     color: rgb(21, 20, 104);
     padding-top: 10%;
-    padding-bottom:21%;
+    padding-bottom:5%;
 }
 
 .navBar{
@@ -50,7 +50,8 @@ h3{
     text-decoration: none;
 }
 
-.boton2{
+.boton2,
+.botonIrInicio{
     background-color: #151468;
     border-radius: 10px;
     color: white;
