@@ -4,6 +4,7 @@ import NavBar from '../NavBar/NavBar'
 import { Link, NavLink } from 'react-router-dom'
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
 import { db } from '../../services/firebase'
+import swal from 'sweetalert'
 
 
 const Cart = () => {
@@ -57,11 +58,23 @@ const Cart = () => {
             }).then(({ id }) => {
                 batch.commit()
                 console.log(`El id de la orden es: ${id}`)
-                alert('compra hecha')
+                swal({
+                    title: "Su compra fue procesada",
+                    text: "en breve nos estaremos comunicando",
+                    icon: "success",
+                    button: "Aceptar",
+                    timer:"4000"
+                  });
                 removeAll()
             }).catch(error => {
                 console.log(error)
-                alert(`el producto seleccionado no tiene stock suficiente`)
+                swal({
+                    title: "No hay Stock",
+                    text: "Corrobore el stock en la tarjeta del producto",
+                    icon: "error",
+                    button: "Aceptar",
+                    timer:"5000"
+                  });
             }).finally(() => {
                 setLoading(false)
             })
