@@ -2,11 +2,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import '../NavBar/NavBar.css'
 
-export default function Formulario() {
+export default function Formulario(setBuyer) {
   const { register, handleSubmit, formState:{errors}} = useForm();
 
   const onSubmit = (data) => {
-  console.log(data);
+  console.log(data) 
+  setBuyer(data);
+  
   }
 
   return (
