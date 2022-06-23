@@ -4,6 +4,7 @@ import NavBar from '../NavBar/NavBar'
 import { Link, NavLink } from 'react-router-dom'
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
 import { db } from '../../services/firebase'
+import Formulario from '../Form/Form'
 import swal from 'sweetalert'
 
 
@@ -12,17 +13,21 @@ const Cart = () => {
 
     const { cart, getQuantity, removeItem, removeAll, totalPrice} = useContext(CartContext)
 
+    const [buyer, setBuyer] = useState({
+        nombre:'',
+        apellido: '',
+        direction: '',
+        localidad: '',
+        email: '',
+        telefono: ''
+    })
+
     const createOrder = () => {
         console.log('crear orden')
         setLoading(true)
 
         const objOrder = {
-            buyer: {
-                name:'Peter Parker',
-                email:'peter@parker.com',
-                phone:'123654987',
-                address: 'direccion 123456'
-            },
+            buyer,
             Items: cart,
             total: totalPrice()
         }
@@ -106,10 +111,12 @@ const Cart = () => {
                     </div>
                 )})
             }
+            <Formulario setBuyer={setBuyer}/>
             <div className="bottonFotter">
                 <div><button onClick = {() => removeAll()}className="boton2">Vaciar Carrito</button></div>
                 <div><button className="boton2" onClick={createOrder}>Crear Orden</button></div>
-            </div>            
+            </div> 
+                       
             <div className="totalCompra"> Total: ${totalPrice()}</div>
         </div>
     </div>
