@@ -1,6 +1,5 @@
 import React from "react"
 import '../NavBar/NavBar.css'
-import { ItemCount } from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
 
 const Item = ({id, name, price, img}) => {

@@ -6,13 +6,8 @@ import swal from 'sweetalert'
 export default function Formulario({setBuyer }) {
   const { register, handleSubmit, formState:{errors}} = useForm();
 
-  const onSubmit = (data, e ) => {
-  console.log(data) 
+  const onSubmit = (data, e ) => { 
   setBuyer(data)
-
-  
-  
- 
 
   swal({
     title: "Datos agregados correctamente",

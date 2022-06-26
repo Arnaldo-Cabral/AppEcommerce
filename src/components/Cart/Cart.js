@@ -13,10 +13,6 @@ const Cart = () => {
 
     const { cart, getQuantity, removeItem, removeAll, totalPrice} = useContext(CartContext)
 
-    
-    
-
-
     const [buyer, setBuyer] = useState({
         nombre:'',
         apellido: '',
@@ -27,10 +23,7 @@ const Cart = () => {
     })
 
     const createOrder = () => {
-        console.log('crear orden')
         setLoading(true)
-
-        
 
         const objOrder = {
             buyer,
@@ -68,7 +61,7 @@ const Cart = () => {
                 }
             }).then(({ id }) => {
                 batch.commit()
-                console.log(`El id de la orden es: ${id}`)
+
                 swal({
                     title: "Su compra fue procesada",
                     text: "en breve nos estaremos comunicando",

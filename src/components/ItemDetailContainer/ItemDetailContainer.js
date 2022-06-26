@@ -1,6 +1,5 @@
 import '../NavBar/NavBar.css'
 import { useState, useEffect } from "react";
-import { getProductsById } from "../asyncmock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from 'react-router-dom';
 import { getDocs, doc, getDoc } from 'firebase/firestore';
@@ -17,7 +16,7 @@ const ItemDetailContainer = () => {
     useEffect(() =>{
 
         getDoc(doc(db, 'products', productId)).then(response => {
-            console.log(response)
+
             const product = { id: response.id, ...response.data()}
             setProduct(product)
         }).catch(error => {
@@ -25,9 +24,7 @@ const ItemDetailContainer = () => {
         }).finally(() => {
             setLoading(false)
         })
-        //getProductsById(productId).then(response =>{
-        //   setProduct(response)
-        //})  
+        
     }, [productId])
 
     if(loading) {

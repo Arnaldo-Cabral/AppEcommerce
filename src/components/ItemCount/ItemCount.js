@@ -4,9 +4,6 @@ import NavBar from "../NavBar/NavBar.css"
 export const ItemCount = ({onConfirm, stock, initial = 1 }) => {
     const [count, setCount] = useState(initial)
 
-    console.log(initial)
-    
-
     const decrement = () => {
         if(count > 1)
         setCount((count) => count - 1)
@@ -17,8 +14,6 @@ export const ItemCount = ({onConfirm, stock, initial = 1 }) => {
        if(count < stock)
         setCount(count + 1)    
     }
-
-    
 
     return(
         <div className='contador' >
