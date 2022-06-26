@@ -14,7 +14,6 @@ const Cart = () => {
     const { cart, getQuantity, removeItem, removeAll, totalPrice} = useContext(CartContext)
 
     
-
     
 
 
