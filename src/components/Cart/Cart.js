@@ -13,6 +13,11 @@ const Cart = () => {
 
     const { cart, getQuantity, removeItem, removeAll, totalPrice} = useContext(CartContext)
 
+    
+
+    
+
+
     const [buyer, setBuyer] = useState({
         nombre:'',
         apellido: '',
@@ -25,6 +30,8 @@ const Cart = () => {
     const createOrder = () => {
         console.log('crear orden')
         setLoading(true)
+
+        
 
         const objOrder = {
             buyer,
@@ -96,6 +103,8 @@ const Cart = () => {
         )
     }
 
+    
+
     return(
     <div className="altura">
         <h1>Cart</h1>
@@ -114,9 +123,8 @@ const Cart = () => {
             <Formulario setBuyer={setBuyer}/>
             <div className="bottonFotter">
                 <div><button onClick = {() => removeAll()}className="boton2">Vaciar Carrito</button></div>
-                <div><button className="boton2" onClick={createOrder}>Crear Orden</button></div>
-            </div> 
-                       
+                <div><button className="boton2" onClick={createOrder } disabled={false}>Crear Orden</button></div>                
+            </div>
             <div className="totalCompra"> Total: ${totalPrice()}</div>
         </div>
     </div>

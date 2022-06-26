@@ -1,20 +1,35 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import '../NavBar/NavBar.css'
+import swal from 'sweetalert'
 
-export default function Formulario(setBuyer) {
+export default function Formulario({setBuyer }) {
   const { register, handleSubmit, formState:{errors}} = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e ) => {
   console.log(data) 
-  setBuyer(data);
+  setBuyer(data)
+
   
+  
+ 
+
+  swal({
+    title: "Datos agregados correctamente",
+    text: "ya puede crear la orden",
+    icon: "success",
+    button: "Aceptar",
+    timer:"4000"
+  });
+  e.target.reset();
   }
+
+  
 
   return (
     <div>            
-        <h2>Formulario</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <h2>Complete el Formulario para generar la orden</h2>
+        <form onSubmit={handleSubmit(onSubmit) }>
             <div>
                 <label>Nombre</label>
                 <input type="text" name="nombre" {...register('nombre',{ required: true, maxLength: 20 })}/>
@@ -42,6 +57,7 @@ export default function Formulario(setBuyer) {
             <div>
                 <label>E-mail</label>
                 <input type="email" name="email" {...register('email',{ required: true, pattern:/\S+@\S+\.\S+/ })}/>
+                {errors.localidad?.type ==='required' && <p> * El campo es requerido</p>}
                 {errors.email?.type ==='pattern' && <p> * El formato es incorrecto</p>}
             </div>
             <div>
@@ -54,46 +70,3 @@ export default function Formulario(setBuyer) {
     </div>  
   );
 }
-
-
-/* export default function Formulario  ()  {
-
-    const { register, handleSubmit } = useForm(); 
-    const onSubmit = data => console.log(data);
-    
-
-    
-
-    return(
-        <Link to='/formulario'>
-            <div>            
-                <h2>Formulario</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div>
-                        <label>Nombre</label>
-                        <input type="text" {...register('nombre')}/>
-                    </div>
-                    <div>
-                        <label>Dirección</label>
-                        <input type="text" name=""/>
-                    </div>
-                    <div>
-                        <label>Edad</label>
-                        <input type="text" name=""/>
-                    </div>
-                    <div>
-                        <label>País</label>
-                        <select>
-                            <option value="es">Españoles</option>
-                            <option value="it">Italia</option>
-                            <option value="ar">Argentina</option>
-                        </select>
-                    </div>
-                    <input type="submit" value="Enviar" />
-                </form>
-            </div>
-        </Link>
-    )    
-}
-
- */
